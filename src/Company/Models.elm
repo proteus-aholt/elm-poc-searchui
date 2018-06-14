@@ -14,7 +14,7 @@ type alias Company =
 
 new : Company
 new =
-    { id = "0"
+    { id = ""
     , name = ""
     , website = ""
     }

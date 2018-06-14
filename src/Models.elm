@@ -1,4 +1,4 @@
-module Models exposing (Model, intiialModel)
+module Models exposing (Model, initialModel)
 
 import Routing exposing (Route)
 import Company.Models exposing (Company)
@@ -10,8 +10,8 @@ type alias Model =
     }
 
 
-intiialModel : Route -> Model
-intiialModel route =
+initialModel : Route -> Model
+initialModel route =
     { companies = []
     , route = route
     }

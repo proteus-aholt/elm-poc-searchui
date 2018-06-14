@@ -2,7 +2,7 @@ module Main exposing (main)
 
 import Msgs exposing (Msg)
 import Routing
-import Models exposing (Model, intiialModel)
+import Models exposing (Model, initialModel)
 import Navigation exposing (Location)
 import Update exposing (update)
 import View exposing (view)
@@ -14,7 +14,7 @@ init location =
         currentRoute =
             Routing.parseLocation location
     in
-        ( intiialModel currentRoute, Cmd.none )
+        ( initialModel currentRoute, Cmd.none )
 
 
 main : Program Never Model Msg
