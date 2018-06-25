@@ -1,0 +1,11 @@
+{
+  "name": "poc-searchui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:proteus-aholt/elm-poc-searchui.git",
+  "author": "Alan Holt <aholt@proteus.co>",
+  "license": "MIT",
+  "dependencies": {
+    "idb": "^2.1.3"
+  }
+}

@@ -1,17 +1,22 @@
 module Models exposing (Model, initialModel)
 
 import Routing exposing (Route)
-import Company.Models exposing (Company)
-
+import Company.Storage
 
 type alias Model =
-    { companies : List Company
-    , route : Route
+    { route : Route
+    , listResponse : Company.Storage.CompanyListResponse
     }
 
 
 initialModel : Route -> Model
 initialModel route =
-    { companies = []
-    , route = route
+    { route = route
+    , listResponse = 
+        { limit = 10
+        , offset = 0
+        , orderBy = "id"
+        , total = 0
+        , result = [] 
+        }
     }

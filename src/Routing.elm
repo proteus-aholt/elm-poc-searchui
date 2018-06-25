@@ -2,7 +2,7 @@ module Routing exposing (Route(..), parseLocation)
 
 import Company.Models exposing (CompanyId)
 import Navigation exposing (Location)
-import UrlParser exposing (Parser, parseHash, oneOf, map, top, s, string, (</>))
+import UrlParser exposing (Parser, parseHash, oneOf, map, top, s, int, (</>))
 
 
 type Route
@@ -15,7 +15,7 @@ matchers : Parser (Route -> a) a
 matchers =
     oneOf
         [ map CompaniesRoute top
-        , map CompanyRoute (s "company" </> string)
+        , map CompanyRoute (s "company" </> int)
         , map CompaniesRoute (s "companies")
         ]
 

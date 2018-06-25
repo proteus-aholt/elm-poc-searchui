@@ -2,7 +2,7 @@ module Company.Models exposing (CompanyId, Company, new)
 
 
 type alias CompanyId =
-    String
+    Int
 
 
 type alias Company =
@@ -14,7 +14,7 @@ type alias Company =
 
 new : Company
 new =
-    { id = ""
+    { id = 0
     , name = ""
     , website = ""
     }
