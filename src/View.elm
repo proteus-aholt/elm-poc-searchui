@@ -33,7 +33,7 @@ companyEditView : Model -> CompanyId -> Html Msg
 companyEditView model companyId =
     let
         maybeCompany =
-            model.listResponse.result
+            model.companies
                 |> List.filter (\company -> company.id == companyId)
                 |> List.head
     in
