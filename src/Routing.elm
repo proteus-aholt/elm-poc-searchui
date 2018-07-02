@@ -1,4 +1,4 @@
-module Routing exposing (Route(..), parseLocation)
+module Routing exposing (Route(..), parseLocation, companiesPath, companyPath)
 
 import Company.Models exposing (CompanyId)
 import Navigation exposing (Location)
@@ -28,3 +28,9 @@ parseLocation location =
 
         Nothing ->
             NotFoundRoute
+
+companiesPath : String
+companiesPath = "#companies"
+
+companyPath : CompanyId -> String
+companyPath id = "#company" ++ (toString id)
